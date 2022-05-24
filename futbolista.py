@@ -1,6 +1,5 @@
-from persona import Persona
 from deportista import Deportista
-class Futbolista( Deportista):
+class Futbolista(Deportista):
     _listaFutbolistas = []
     def __init__(self, nombre, edad, altura, sexo,  añosPracticando, golesMarcados, tarjetasRojas, piernaHabil):
         super().__init__(nombre,edad,altura,sexo,"Futbol",añosPracticando)
@@ -12,6 +11,9 @@ class Futbolista( Deportista):
     @classmethod
     def getListaFutbolistas(cls):
         cls._listaFutbolistas 
+    @classmethod
+    def setListaFutbolistas(cls,nuevo):
+        cls._listaFutbolistas=nuevo
 
     def getGolesMarcados(self):
         return self._golesMarcados
